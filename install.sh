@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-apt-get install lsb-core sudo
+apt-get install lsb-release sudo
 UBUNTU=false
 DEBIAN=false
 if [ "$(uname)" = "Linux" ]
