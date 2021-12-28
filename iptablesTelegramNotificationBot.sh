@@ -2,4 +2,5 @@
 
 cd /etc/iptablesTelegramNotificationBot
 . ./venv/bin/activate
-python3 iptablesTelegramNotificationBot.py
+echo "$1"
+python3 iptablesTelegramNotificationBot.py "$1"

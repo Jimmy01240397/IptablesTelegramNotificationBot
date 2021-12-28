@@ -94,7 +94,7 @@ set +e
 sudo mkdir /etc/iptablesTelegramNotificationBot 2> /dev/null
 set -e
 
-for filename in iptablesTelegramNotificationBot.py iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf lastiptableslog myserviceslist requirements.txt
+for filename in iptablesTelegramNotificationBot.py iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf lastiptableslog requirements.txt
 do
 	sudo cp -r $filename /etc/iptablesTelegramNotificationBot/
 done
@@ -104,6 +104,7 @@ do
 	sudo chmod +x /etc/iptablesTelegramNotificationBot/$filename
 done
 
+sudo cp /etc/services /etc/iptablesTelegramNotificationBot/myserviceslist
 sudo cp iptablesTelegramNotificationLog.conf /etc/rsyslog.d/iptablesTelegramNotificationLog.conf
 sudo /etc/init.d/rsyslog restart
 
