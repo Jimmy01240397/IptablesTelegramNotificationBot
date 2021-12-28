@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for filename in iptablesTelegramNotificationBot.py iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf lastiptableslog myserviceslist venv
+for filename in iptablesTelegramNotificationBot.py iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf lastiptableslog myserviceslist requirements.txt venv
 do
 	sudo rm -r /etc/iptablesTelegramNotificationBot/$filename
 done
