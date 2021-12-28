@@ -107,6 +107,7 @@ done
 sudo cp iptablesTelegramNotificationLog.conf /etc/rsyslog.d/iptablesTelegramNotificationLog.conf
 sudo /etc/init.d/rsyslog restart
 
+cd /etc/iptablesTelegramNotificationBot
 
 $INSTALL_PYTHON_PATH -m venv venv
 . ./venv/bin/activate
