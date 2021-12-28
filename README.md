@@ -19,7 +19,7 @@ sh install.sh
 ```
 
 ## Remove
-cd into this repo iptablesTelegramNotificationBot.
+cd into this repo iptablesTelegramNotificationBot and run remove.sh.
 ```bash
 cd iptablesTelegramNotificationBot
 sh remove.sh
