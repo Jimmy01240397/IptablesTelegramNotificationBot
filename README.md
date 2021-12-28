@@ -18,6 +18,13 @@ cd iptablesTelegramNotificationBot
 sh install.sh
 ```
 
+3. config your Telegram bot token in iptablesTelegramNotificationToken.conf
+```bash
+vi iptablesTelegramNotificationToken.conf
+
+12345:AAAAAAAAAAAAAAAA
+```
+
 ## Remove
 cd into this repo iptablesTelegramNotificationBot and run remove.sh.
 ```bash
