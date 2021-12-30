@@ -28,7 +28,7 @@ vi /etc/IptablesTelegramNotificationBot/iptablesTelegramNotificationToken.conf
 
 4. config your iptables log prefix in iptablesTelegramNotificationLog.conf
 ```
-vi /etc/IptablesTelegramNotificationBot/iptablesTelegramNotificationLog.conf
+vi /etc/rsyslog.d/iptablesTelegramNotificationLog.conf
 
 #################################################
 ####  iptables Telegram Notification log     ####
