@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for filename in iptablesTelegramNotificationBot.py iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf lastiptableslog myserviceslist requirements.txt venv
+for filename in iptablesTelegramNotificationBot.sh iptablesTelegramNotificationToken.conf userid.conf lastiptableslog myserviceslist
 do
 	sudo rm -r /etc/iptablesTelegramNotificationBot/$filename
 done
@@ -13,3 +13,6 @@ then
 	rm -r /etc/iptablesTelegramNotificationBot
 fi
 
+echo ""
+echo ""
+echo "Iptables Telegram Notification Bot remove.sh complete."
