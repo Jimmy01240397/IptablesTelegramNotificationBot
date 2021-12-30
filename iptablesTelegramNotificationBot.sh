@@ -10,7 +10,7 @@ splitinspace()
 
 cd /etc/iptablesTelegramNotificationBot
 
-lastlog=`cat /etc/iptables/lastiptableslog`
+lastlog=`cat lastiptableslog`
 src=`echo $1 | splitinspace | grep SRC | cut -c 5-`
 pro=`echo $1 | splitinspace | grep PROTO | cut -c 7-`
 port=`echo $1 | splitinspace | grep DPT | cut -c 5-`
@@ -29,7 +29,7 @@ else
 fi
 if [ "$bfsrc" != "$src" ] || [ "$bfpro" != "$pro" ] || [ "$bfport" != "$port" ] || [ $(( $nowtime - $bftime )) -ge 60 ]
 then
-	service=`grep -i "	$port/$pro" /etc/myserviceslist | awk '{print $1}'`
+	service=`grep -i "	$port/$pro" myserviceslist | awk '{print $1}'`
 	#echo $service
 	if [ "$service" = "" ]
 	then
@@ -40,6 +40,6 @@ then
 	echo "The $service has been ACCEPT from ip=$src"
 	curl "https://api.telegram.org/bot$(cat iptablesTelegramNotificationToken.conf)/sendMessage?chat_id=$(cat userid.conf)&text=$(hostname): The $service has been ACCEPT from ip=$src"
 
-	echo "TIME=$nowtime $1" > /etc/iptables/lastiptableslog
+	echo "TIME=$nowtime $1" > lastiptableslog
 	#echo send
 fi
