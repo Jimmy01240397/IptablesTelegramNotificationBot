@@ -21,9 +21,23 @@ sh install.sh
 
 3. config your Telegram bot token in iptablesTelegramNotificationToken.conf
 ```bash
-vi iptablesTelegramNotificationToken.conf
+vi /etc/IptablesTelegramNotificationBot/iptablesTelegramNotificationToken.conf
 
 12345:AAAAAAAAAAAAAAAA
+```
+
+4. config your iptables log prefix in iptablesTelegramNotificationLog.conf
+```
+vi /etc/IptablesTelegramNotificationBot/iptablesTelegramNotificationLog.conf
+
+#################################################
+####  iptables Telegram Notification log     ####
+#################################################
+
+if $msg contains "<YOUR IPTABLES LOG PREFIX>" then {
+	^/etc/iptablesTelegramNotificationBot/iptablesTelegramNotificationBot.sh
+	stop
+}
 ```
 
 ## Remove
